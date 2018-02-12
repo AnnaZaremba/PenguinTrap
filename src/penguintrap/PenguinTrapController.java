@@ -1,17 +1,21 @@
 package penguintrap;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 public class PenguinTrapController {
 
-    PenguinTrap penguinTrap = new PenguinTrap();
+    private PenguinTrap penguinTrap;
+
+    public PenguinTrapController() {
+        penguinTrap = new PenguinTrap();
+    }
 
     @FXML
-    private TextField poleTekstowe;
+    private Label label;
 
     @FXML
     private void losuj() {
-        poleTekstowe.setText(penguinTrap.getWynik());
+        label.setText(penguinTrap.getWynik());
     }
 }
